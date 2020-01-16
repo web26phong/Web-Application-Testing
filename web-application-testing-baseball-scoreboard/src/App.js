@@ -10,13 +10,13 @@ function App() {
   const [fouls, setFouls] = useState(0);
   const [message, setMessage] = useState(initialMessage);
 
-  const increaseBall = () => {
+ const increaseBall = () => {
     if (balls <3){
       setBalls(balls+1);
       setMessage("Ball!");
     }else {
       clearBoard();
-      setMessage("ball 4! player moved to first base. next hitter up to bat!")
+      setMessage("Ball 4! player moved to first base. next hitter up to bat!")
     }
   }
 
