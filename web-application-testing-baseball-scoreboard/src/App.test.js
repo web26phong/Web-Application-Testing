@@ -15,3 +15,27 @@ test("Scoreboard renders without crashing", () => {
 test("User Dashboard renders without crashing", () => {
   render(<Dashboard />)
 })
+
+test("Ball, strike, and foul count are rendered", () => {
+  const { getByTestId } = render(<App />);
+
+  getByTestId(/ballsCount/i);
+  getByTestId(/strikesCount/i);
+  getByTestId(/foulsCount/i);
+})
+
+test("Increase ball, increase strike, and increase foul buttons are rendered", () => {
+  const { getByTestId } = render(<App />);
+
+  getByTestId(/increaseBallButton/i);
+  getByTestId(/increaseStrikeButton/i);
+  getByTestId(/increaseFoulButton/i);
+  getByTestId(/hitButton/i);
+})
+
+test("Status message <p> and it's parent <div> are rendered", () => {
+  const { getByTestId } = render(<App />);
+
+  getByTestId(/statusMessageDiv/i);
+  getByTestId(/statusMessageP/i);
+})

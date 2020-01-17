@@ -51,8 +51,8 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <p>{message}</p>
+      <div data-testid="statusMessageDiv">
+        <p data-testid="statusMessageP">{message}</p>
       </div>
       <Scoreboard balls={balls} strikes={strikes} fouls={fouls}/>
       <Dashboard increaseBall={increaseBall} increaseStrike={increaseStrike} increaseFoul={increaseFoul} hit={hit}/>
